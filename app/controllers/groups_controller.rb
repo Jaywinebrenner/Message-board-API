@@ -1,8 +1,7 @@
 class GroupsController < ApplicationController
 
 
-  def index
-
+  def index  
     if
       name = params[:name]
       @groups = Group.search(name)
