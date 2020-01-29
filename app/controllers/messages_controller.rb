@@ -45,6 +45,6 @@ class MessagesController < ApplicationController
   end
 
   def message_params
-    params.permit(:author, :content, :created_at, :updated_at)
+    params.permit(:author, :content, :created_at, :updated_at, :group_id)
   end
 end
