@@ -2,9 +2,16 @@ class GroupsController < ApplicationController
 
 
   def index
-    name = params[:search]
-    @groups = Group.search(name)
-    json_response(@groups)
+
+    if
+      name = params[:name]
+      @groups = Group.search(name)
+        json_response(@groups)
+    else
+      description = params[:description]
+      @groups = Group.description_search(description)
+      json_response(@groups)
+    end
   end
 
   def show

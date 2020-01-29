@@ -17,7 +17,7 @@ class Seed
     20.times do |i|
       group = Group.create!(
         name: Faker::Games::Pokemon.name,
-        description: Faker::Lorem.sentence(word_count: 10, supplemental: true, random_words_to_add: 10)
+        description: Faker::Games::Fallout.character
       )
       5.times do |i|
         author = Faker::Name.first_name
